@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ماما نورة — أفضل شاورما في الرياض. منيو كامل، فروع، طلب توصيل، ساعات العمل">
+<meta name="keywords" content="ماما نورة, شاورما الرياض, مطعم ماما نورة, بروستد, توصيل">
+<title>ماما نورة | أصيل منذ البداية</title>
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "ماما نورة",
+  "image": "",
+  "url": "https://mamanoura.com",
+  "telephone": "+966-11-XXXXXXX",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "الرياض",
+    "addressCountry": "SA"
+  },
+  "servesCuisine": "شاورما، بروستد، مشاوي",
+  "priceRange": "20-40 ريال",
+  "openingHours": "Sa-Th 05:30-03:00",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.3",
+    "reviewCount": "28714"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ===================== TOKENS ===================== */
+  :root {
+    --espresso:    #1C0A00;
+    --espresso-2:  #2E1200;
+    --gold:        #C8860A;
+    --gold-light:  #E8A820;
+    --gold-pale:   #F5D98A;
+    --cream:       #FFF8EE;
+    --cream-2:     #FFF1D6;
+    --cream-3:     #FAE8C0;
+    --rust:        #B83A2E;
+    --rust-dark:   #8C2920;
+    --text-dark:   #1C0A00;
+    --text-mid:    #5C3A1E;
+    --text-light:  #9C7040;
+    --border:      rgba(200,134,10,0.25);
+    --border-strong: rgba(200,134,10,0.5);
+    --shadow-warm: 0 4px 24px rgba(28,10,0,0.12);
+    --shadow-gold: 0 8px 40px rgba(200,134,10,0.15);
+    --r-sm: 8px;
+    --r-md: 14px;
+    --r-lg: 20px;
+    --r-xl: 28px;
+  }
+
+  /* ===================== RESET ===================== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    direction: rtl;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+  button { font-family: inherit; cursor: pointer; border: none; }
+  ul { list-style: none; }
+
+  /* ===================== SCROLLBAR ===================== */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--cream-2); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+  /* ===================== NAV ===================== */
+  .nav {
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    z-index: 1000;
+    background: rgba(28,10,0,0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(200,134,10,0.2);
+    transition: background 0.3s;
+  }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo-icon {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    color: var(--espresso);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .nav-logo-text {
+    font-family: 'Amiri', serif;
+    font-size: 22px;
+    color: var(--cream);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .nav-logo-sub {
+    font-size: 11px;
+    color: var(--gold-pale);
+    display: block;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .nav-links a {
+    color: var(--cream);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 50px;
+    transition: all 0.2s;
+    opacity: 0.85;
+  }
+  .nav-links a:hover { opacity: 1; background: rgba(200,134,10,0.15); color: var(--gold-pale); }
+  .nav-order-btn {
+    background: var(--gold);
+    color: var(--espresso);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 50px;
+    transition: all 0.25s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .nav-order-btn:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(200,134,10,0.4); }
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 24px; height: 2px;
+    background: var(--cream);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 68px; right: 0; left: 0;
+    background: var(--espresso);
+    padding: 16px 24px 24px;
+    border-bottom: 1px solid var(--border);
+    z-index: 999;
+    flex-direction: column;
+    gap: 4px;
+    animation: slideDown 0.25s ease;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: var(--cream);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 16px;
+    border-radius: var(--r-sm);
+    transition: all 0.2s;
+  }
+  .mobile-menu a:hover { background: rgba(200,134,10,0.15); color: var(--gold-pale); }
+  .mobile-menu .order-btn-mobile {
+    background: var(--gold);
+    color: var(--espresso);
+    font-weight: 700;
+    text-align: center;
+    border-radius: 50px;
+    margin-top: 8px;
+    padding: 14px 16px;
+  }
+
+  /* ===================== HERO ===================== */
+  .hero {
+    min-height: 100vh;
+    background: var(--espresso);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-top: 68px;
+  }
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image:
+      repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%),
+      repeating-linear-gradient(-45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%);
+    background-size: 30px 30px;
+  }
+  .hero-glow {
+    position: absolute;
+    top: 20%; right: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(200,134,10,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-glow-2 {
+    position: absolute;
+    bottom: -10%; left: -5%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(184,58,46,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(200,134,10,0.15);
+    border: 1px solid rgba(200,134,10,0.35);
+    color: var(--gold-pale);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+  }
+  .hero-badge-dot {
+    width: 7px; height: 7px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+  .hero-title {
+    font-family: 'Amiri', serif;
+    font-size: clamp(48px, 7vw, 80px);
+    color: var(--cream);
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .hero-title-gold { color: var(--gold); }
+  .hero-subtitle {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: rgba(255,248,238,0.65);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 480px;
+  }
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--espresso);
+    font-size: 16px;
+    font-weight: 800;
+    padding: 14px 32px;
+    border-radius: 50px;
+    transition: all 0.25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid transparent;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,134,10,0.4); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--cream);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 50px;
+    border: 1.5px solid rgba(255,248,238,0.3);
+    transition: all 0.25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold-pale); background: rgba(200,134,10,0.08); }
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+  }
+  .hero-stat {}
+  .hero-stat-num {
+    font-family: 'Amiri', serif;
+    font-size: 32px;
+    color: var(--gold);
+    font-weight: 700;
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 13px;
+    color: rgba(255,248,238,0.5);
+    margin-top: 4px;
+  }
+  .hero-visual {
+    position: relative;
+  }
+  .hero-visual-main {
+    width: 100%;
+    aspect-ratio: 1;
+    max-width: 440px;
+    margin: 0 auto;
+    background: var(--espresso-2);
+    border-radius: 50%;
+    border: 1px solid rgba(200,134,10,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-visual-ring {
+    position: absolute;
+    inset: -20px;
+    border-radius: 50%;
+    border: 1px solid rgba(200,134,10,0.08);
+    animation: spin 30s linear infinite;
+  }
+  .hero-visual-ring-2 {
+    position: absolute;
+    inset: -50px;
+    border-radius: 50%;
+    border: 1px dashed rgba(200,134,10,0.05);
+    animation: spin 50s linear infinite reverse;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .hero-plate {
+    font-size: 120px;
+    line-height: 1;
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-16px); }
+  }
+  .hero-float-tag {
+    position: absolute;
+    background: var(--espresso-2);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--r-md);
+    padding: 10px 16px;
+    color: var(--cream);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: float2 5s ease-in-out infinite;
+    white-space: nowrap;
+  }
+  .hero-float-tag-icon {
+    font-size: 20px;
+  }
+  @keyframes float2 {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+  }
+  .tag-1 { top: 8%; right: -5%; animation-delay: 0s; }
+  .tag-2 { bottom: 15%; left: -8%; animation-delay: 1.5s; }
+  .tag-3 { top: 50%; left: -12%; animation-delay: 3s; }
+  .tag-gold { color: var(--gold); }
+
+  /* ===================== SECTION BASE ===================== */
+  section { padding: 80px 24px; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-header { text-align: center; margin-bottom: 56px; }
+  .section-eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+    display: block;
+  }
+  .section-title {
+    font-family: 'Amiri', serif;
+    font-size: clamp(30px, 4.5vw, 46px);
+    font-weight: 700;
+    color: var(--espresso);
+    line-height: 1.25;
+  }
+  .section-desc {
+    font-size: 16px;
+    color: var(--text-mid);
+    margin-top: 14px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+  .section-divider {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--rust));
+    border-radius: 2px;
+    margin: 20px auto 0;
+  }
+
+  /* ===================== MENU ===================== */
+  #menu { background: var(--cream-2); }
+  .menu-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .menu-tab {
+    background: var(--cream);
+    border: 1.5px solid var(--border);
+    color: var(--text-mid);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .menu-tab:hover, .menu-tab.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--espresso);
+    box-shadow: 0 4px 16px rgba(200,134,10,0.25);
+  }
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .menu-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-gold); border-color: var(--border-strong); }
+  .menu-card-emoji {
+    background: var(--espresso-2);
+    padding: 24px;
+    text-align: center;
+    font-size: 64px;
+    line-height: 1;
+    position: relative;
+  }
+  .menu-card-badge {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: var(--rust);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 50px;
+  }
+  .menu-card-body { padding: 18px 20px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+  .menu-card-name { font-size: 17px; font-weight: 700; color: var(--espresso); }
+  .menu-card-desc { font-size: 13px; color: var(--text-mid); line-height: 1.6; flex: 1; }
+  .menu-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-top: 1px solid var(--border);
+    background: var(--cream-2);
+  }
+  .menu-price {
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .menu-price-sub { font-size: 11px; color: var(--text-light); font-family: 'Tajawal'; }
+  .menu-order-btn {
+    background: var(--espresso);
+    color: var(--gold-pale);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 50px;
+    transition: all 0.2s;
+    font-family: 'Tajawal', sans-serif;
+  }
+  .menu-order-btn:hover { background: var(--gold); color: var(--espresso); }
+  .menu-category { display: none; }
+  .menu-category.active { display: contents; }
+
+  /* ===================== BRANCHES ===================== */
+  #branches { background: var(--espresso); }
+  #branches .section-title { color: var(--cream); }
+  #branches .section-desc { color: rgba(255,248,238,0.55); }
+  #branches .section-eyebrow { color: var(--gold-pale); }
+  .branches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  .branch-card {
+    background: var(--espresso-2);
+    border: 1px solid rgba(200,134,10,0.2);
+    border-radius: var(--r-lg);
+    padding: 24px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .branch-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 80px; height: 80px;
+    background: radial-gradient(circle at top right, rgba(200,134,10,0.08), transparent 70%);
+  }
+  .branch-card:hover { border-color: rgba(200,134,10,0.5); transform: translateY(-4px); }
+  .branch-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; gap: 12px; }
+  .branch-name { font-size: 18px; font-weight: 700; color: var(--cream); }
+  .branch-district { font-size: 13px; color: var(--text-light); margin-top: 3px; }
+  .branch-status {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 50px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .branch-status.open { background: rgba(34,197,94,0.15); color: #4ade80; border: 1px solid rgba(74,222,128,0.3); }
+  .branch-status.busy { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+  .branch-details { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+  .branch-detail { display: flex; align-items: flex-start; gap: 10px; }
+  .branch-detail-icon { font-size: 16px; margin-top: 1px; flex-shrink: 0; }
+  .branch-detail-text { font-size: 13px; color: rgba(255,248,238,0.65); line-height: 1.5; }
+  .branch-hours { font-size: 13px; color: var(--gold-pale); font-weight: 600; }
+  .branch-actions { display: flex; gap: 10px; }
+  .branch-btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: var(--r-sm);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.2s;
+    font-family: 'Tajawal', sans-serif;
+    cursor: pointer;
+  }
+  .branch-btn-map {
+    background: rgba(200,134,10,0.15);
+    border: 1px solid rgba(200,134,10,0.3);
+    color: var(--gold-pale);
+  }
+  .branch-btn-map:hover { background: rgba(200,134,10,0.25); }
+  .branch-btn-order {
+    background: var(--gold);
+    color: var(--espresso);
+    border: 1px solid transparent;
+  }
+  .branch-btn-order:hover { background: var(--gold-light); }
+  .branch-services { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .branch-service-tag {
+    background: rgba(255,248,238,0.06);
+    color: rgba(255,248,238,0.5);
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,248,238,0.1);
+  }
+
+  /* ===================== ORDER HUB ===================== */
+  #order { background: var(--cream); }
+  .order-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .order-card {
+    background: var(--cream-2);
+    border: 1.5px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 28px 20px;
+    text-align: center;
+    transition: all 0.25s;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .order-card:hover { border-color: var(--gold); background: var(--cream); transform: translateY(-4px); box-shadow: var(--shadow-gold); }
+  .order-card-icon { font-size: 48px; line-height: 1; }
+  .order-card-name { font-size: 17px; font-weight: 700; color: var(--espresso); }
+  .order-card-desc { font-size: 13px; color: var(--text-mid); line-height: 1.5; }
+  .order-card-action {
+    background: var(--espresso);
+    color: var(--gold-pale);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-top: 4px;
+    transition: all 0.2s;
+    font-family: 'Tajawal';
+  }
+  .order-card:hover .order-card-action { background: var(--gold); color: var(--espresso); }
+  .whatsapp-strip {
+    background: linear-gradient(135deg, #1a5c2a, #25d366);
+    border-radius: var(--r-lg);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .wa-text { color: #fff; }
+  .wa-title { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .wa-desc { font-size: 14px; opacity: 0.85; }
+  .wa-btn {
+    background: #fff;
+    color: #1a5c2a;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+    font-family: 'Tajawal';
+  }
+  .wa-btn:hover { background: #f0fdf4; transform: scale(1.03); }
+
+  /* ===================== FAQ ===================== */
+  #faq { background: var(--cream-2); }
+  .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+  .faq-item {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+  .faq-item.open { border-color: var(--border-strong); box-shadow: 0 4px 16px rgba(200,134,10,0.1); }
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .faq-q-text { font-size: 15px; font-weight: 600; color: var(--espresso); flex: 1; }
+  .faq-icon {
+    width: 28px; height: 28px;
+    background: var(--cream-2);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    color: var(--gold);
+    transition: all 0.3s;
+    flex-shrink: 0;
+  }
+  .faq-item.open .faq-icon { background: var(--gold); color: var(--espresso); transform: rotate(45deg); }
+  .faq-answer {
+    display: none;
+    padding: 0 20px 18px;
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.75;
+    border-top: 1px solid var(--border);
+  }
+  .faq-item.open .faq-answer { display: block; }
+
+  /* ===================== CONTACT ===================== */
+  #contact { background: var(--espresso); }
+  #contact .section-title { color: var(--cream); }
+  #contact .section-desc { color: rgba(255,248,238,0.55); }
+  #contact .section-eyebrow { color: var(--gold-pale); }
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .contact-info { display: flex; flex-direction: column; gap: 20px; }
+  .contact-info-card {
+    background: var(--espresso-2);
+    border: 1px solid rgba(200,134,10,0.2);
+    border-radius: var(--r-md);
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .contact-info-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .contact-info-title { font-size: 15px; font-weight: 700; color: var(--cream); margin-bottom: 4px; }
+  .contact-info-val { font-size: 14px; color: rgba(255,248,238,0.6); line-height: 1.6; }
+  .contact-form-wrap {
+    background: var(--espresso-2);
+    border: 1px solid rgba(200,134,10,0.2);
+    border-radius: var(--r-xl);
+    padding: 36px;
+  }
+  .form-group { margin-bottom: 18px; }
+  .form-label { font-size: 13px; font-weight: 600; color: var(--gold-pale); margin-bottom: 8px; display: block; }
+  .form-input, .form-select, .form-textarea {
+    width: 100%;
+    background: rgba(255,248,238,0.05);
+    border: 1px solid rgba(200,134,10,0.2);
+    border-radius: var(--r-sm);
+    padding: 12px 16px;
+    color: var(--cream);
+    font-size: 14px;
+    font-family: 'Tajawal', sans-serif;
+    transition: all 0.2s;
+    direction: rtl;
+    outline: none;
+  }
+  .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,248,238,0.25); }
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--gold);
+    background: rgba(200,134,10,0.07);
+  }
+  .form-select option { background: var(--espresso-2); color: var(--cream); }
+  .form-textarea { resize: vertical; min-height: 120px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-submit {
+    width: 100%;
+    background: var(--gold);
+    color: var(--espresso);
+    font-size: 16px;
+    font-weight: 800;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s;
+    font-family: 'Tajawal', sans-serif;
+    margin-top: 8px;
+  }
+  .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,134,10,0.35); }
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 32px;
+    color: var(--cream);
+  }
+  .form-success-icon { font-size: 48px; margin-bottom: 16px; }
+  .form-success-title { font-size: 20px; font-weight: 700; color: var(--gold-pale); }
+  .form-success-desc { font-size: 14px; color: rgba(255,248,238,0.6); margin-top: 8px; }
+
+  /* ===================== FOOTER ===================== */
+  footer {
+    background: #100500;
+    border-top: 1px solid rgba(200,134,10,0.15);
+    padding: 48px 24px 28px;
+  }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-brand-name {
+    font-family: 'Amiri', serif;
+    font-size: 26px;
+    color: var(--cream);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .footer-brand-desc { font-size: 13px; color: rgba(255,248,238,0.4); line-height: 1.7; margin-bottom: 20px; }
+  .footer-socials { display: flex; gap: 10px; }
+  .footer-social {
+    width: 36px; height: 36px;
+    background: rgba(255,248,238,0.06);
+    border: 1px solid rgba(255,248,238,0.1);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    color: rgba(255,248,238,0.5);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .footer-social:hover { background: var(--gold); border-color: var(--gold); color: var(--espresso); }
+  .footer-col-title { font-size: 14px; font-weight: 700; color: var(--cream); margin-bottom: 16px; }
+  .footer-links { display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: 13px; color: rgba(255,248,238,0.45); transition: all 0.2s; }
+  .footer-links a:hover { color: var(--gold-pale); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,248,238,0.08);
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .footer-copy { font-size: 12px; color: rgba(255,248,238,0.3); }
+  .footer-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: rgba(255,248,238,0.35);
+  }
+  .footer-stars { color: var(--gold); font-size: 14px; letter-spacing: 1px; }
+
+  /* ===================== STICKY MOBILE CTA ===================== */
+  .sticky-mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 16px;
+    left: 16px; right: 16px;
+    z-index: 900;
+    gap: 10px;
+  }
+  .sticky-btn {
+    flex: 1;
+    padding: 14px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+  .sticky-order { background: var(--gold); color: var(--espresso); }
+  .sticky-location { background: rgba(28,10,0,0.9); backdrop-filter: blur(10px); color: var(--cream); border: 1px solid var(--border); }
+
+  /* ===================== ANIMATIONS ===================== */
+  @keyframes slideDown { from { opacity:0; transform:translateY(-10px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+  .fade-up { animation: fadeUp 0.6s ease both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s; }
+
+  /* ===================== LANG TOGGLE ===================== */
+  .lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,248,238,0.08);
+    border: 1px solid rgba(255,248,238,0.12);
+    border-radius: 50px;
+    padding: 5px 14px;
+    color: rgba(255,248,238,0.7);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: auto;
+  }
+  .lang-toggle:hover { background: rgba(200,134,10,0.15); color: var(--gold-pale); border-color: rgba(200,134,10,0.3); }
+
+  /* ===================== SCROLL TO TOP ===================== */
+  .scroll-top {
+    position: fixed;
+    bottom: 80px;
+    left: 24px;
+    width: 44px; height: 44px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 890;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 16px rgba(200,134,10,0.4);
+    border: none;
+    color: var(--espresso);
+  }
+  .scroll-top.visible { opacity: 1; pointer-events: all; }
+  .scroll-top:hover { transform: translateY(-3px); }
+
+  /* ===================== GOOGLE MAPS PLACEHOLDER ===================== */
+  .map-embed {
+    width: 100%;
+    height: 280px;
+    background: var(--espresso-2);
+    border: 1px solid rgba(200,134,10,0.15);
+    border-radius: var(--r-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    color: rgba(255,248,238,0.3);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .map-embed:hover { border-color: rgba(200,134,10,0.4); color: var(--gold-pale); }
+  .map-icon { font-size: 48px; }
+
+  /* ===================== RESPONSIVE ===================== */
+  @media (max-width: 900px) {
+    .hero-content { grid-template-columns: 1fr; text-align: center; padding: 60px 24px; }
+    .hero-ctas { justify-content: center; }
+    .hero-stats { justify-content: center; }
+    .hero-subtitle { margin-left: auto; margin-right: auto; }
+    .hero-visual { display: none; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .contact-layout { grid-template-columns: 1fr; }
+    .nav-links, .nav-order-btn, .lang-toggle { display: none; }
+    .nav-hamburger { display: flex; }
+    .sticky-mobile-cta { display: flex; }
+    .scroll-top { bottom: 84px; }
+  }
+  @media (max-width: 600px) {
+    section { padding: 56px 20px; }
+    .footer-top { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-stats { gap: 24px; }
+    .whatsapp-strip { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== NAV ==================== -->
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="nav-logo-icon">م</div>
+      <div>
+        <span class="nav-logo-text">ماما نورة</span>
+        <span class="nav-logo-sub">Mama Noura</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#menu">المنيو</a></li>
+      <li><a href="#branches">الفروع</a></li>
+      <li><a href="#order">اطلب الآن</a></li>
+      <li><a href="#faq">الأسئلة الشائعة</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+    <button class="lang-toggle" onclick="toggleLang()">EN</button>
+    <a href="#order" class="nav-order-btn">اطلب الآن</a>
+    <button class="nav-hamburger" onclick="toggleMenu()" id="hamburger" aria-label="القائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#menu" onclick="closeMenu()">المنيو</a>
+  <a href="#branches" onclick="closeMenu()">الفروع</a>
+  <a href="#order" onclick="closeMenu()">اطلب الآن</a>
+  <a href="#faq" onclick="closeMenu()">الأسئلة الشائعة</a>
+  <a href="#contact" onclick="closeMenu()">تواصل معنا</a>
+  <a href="#order" class="order-btn-mobile" onclick="closeMenu()">🛒 اطلب الآن</a>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="home">
+  <div class="hero-pattern"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge fade-up">
+        <span class="hero-badge-dot"></span>
+        +28,000 مراجعة على Google ⭐ 4.3
+      </div>
+      <h1 class="hero-title fade-up delay-1">
+        طعم<br><span class="hero-title-gold">أصيل</span><br>منذ البداية
+      </h1>
+      <p class="hero-subtitle fade-up delay-2">
+        شاورما، بروستد، مشاوي وعصائر طازجة — كل يوم من الصباح حتى الفجر. جودة لا تتغير في كل لقمة.
+      </p>
+      <div class="hero-ctas fade-up delay-3">
+        <a href="#order" class="btn-primary">🛒 اطلب الآن</a>
+        <a href="#menu" class="btn-secondary">📋 شوف المنيو</a>
+        <a href="#branches" class="btn-secondary">📍 أقرب فرع</a>
+      </div>
+      <div class="hero-stats fade-up delay-4">
+        <div class="hero-stat">
+          <div class="hero-stat-num">+28K</div>
+          <div class="hero-stat-label">مراجعة Google</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">4.3★</div>
+          <div class="hero-stat-label">تقييم عام</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">20–40</div>
+          <div class="hero-stat-label">ريال للفرد</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-main">
+        <div class="hero-visual-ring"></div>
+        <div class="hero-visual-ring-2"></div>
+        <div class="hero-plate">🌯</div>
+      </div>
+      <div class="hero-float-tag tag-1"><span class="hero-float-tag-icon">⏰</span><span>مفتوح <span class="tag-gold">5:30ص–3:00ص</span></span></div>
+      <div class="hero-float-tag tag-2"><span class="hero-float-tag-icon">🚀</span><span>توصيل سريع</span></div>
+      <div class="hero-float-tag tag-3"><span class="hero-float-tag-icon">🏆</span><span>الأفضل في الرياض</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MENU ==================== -->
+<section id="menu">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-eyebrow">منيو ماما نورة</span>
+      <h2 class="section-title">كل شيء طازج وبنفس الوصفة الأصلية</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">من شاورمتنا الشهيرة إلى عصائرنا الطازجة — كل صنف يُحضَّر بعناية واهتمام</p>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="menu-tab active" onclick="filterMenu('all', this)">🍽️ الكل</button>
+      <button class="menu-tab" onclick="filterMenu('shawarma', this)">🌯 شاورما</button>
+      <button class="menu-tab" onclick="filterMenu('broasted', this)">🍗 بروستد</button>
+      <button class="menu-tab" onclick="filterMenu('grills', this)">🥩 مشاوي</button>
+      <button class="menu-tab" onclick="filterMenu('sandwiches', this)">🥪 ساندويشات</button>
+      <button class="menu-tab" onclick="filterMenu('drinks', this)">🥤 مشروبات</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid">
+
+      <!-- Shawarma -->
+      <div class="menu-card" data-category="shawarma">
+        <div class="menu-card-emoji">🌯<span class="menu-card-badge">الأكثر طلبًا</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">شاورما دجاج</div>
+          <div class="menu-card-desc">شاورما دجاج مشوية على الحطب مع صوص الثوم وخضار طازجة في خبز محلي</div>
+        </div>
+        <div class="menu-card-footer">
+          <div><div class="menu-price">20 ر</div><div class="menu-price-sub">شامل الضريبة</div></div>
+          <button class="menu-order-btn" onclick="window.location='#order'">اطلب</button>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="shawarma">
+        <div class="menu-card-emoji">🥙</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">شاورما لحم</div>
+          <div class="menu-card-desc">لحم عجل مشوي بالتوابل العربية مع طحينة وخضار في خبز محلي هش</div>
+        </div>
+        <div class="menu-card-footer">
+          <div><div class="menu-price">25 ر</div><div class="menu-price-sub">شامل الضريبة</div></div>
+          <button class="menu-order-btn" onclick="window.location='#order'">اطلب</button>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="shawarma">
+        <div class="menu-card-emoji">🌯<span class="menu-card-badge" style="background:#C8860A;">جديد</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">شاورما دجاج بالجبن</div>
+          <div class="menu-card-desc">شاورما الدجاج المحبوبة مع إضافة الجبنة الذائبة وصوص خاص</div>
+        </div>
+        <div class="menu-card-footer">
+          <div><div class="menu-price">22 ر</div><div class="menu-price-sub">شامل الضريبة</div></div>
+          <button class="menu-order-btn" onclick="window.location='#order'">اطلب</button>
+        </div>
+      </div>
+
+      <!-- Broasted -->
+      <div class="menu-card" data-category="broasted">
+        <div class="menu-card-emoji">🍗<span class="menu-card-badge">مميز</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">وجبة بروستد عائلية</div>
+          <div class="menu-card-desc">8 قطع بروستد مقرمشة مع بطاطس وسلطة كول سلو وشراب</div>
+        </div>
+        <div class="menu-card-footer">
+          <div><div class="menu-price">85 ر</div><div class="menu-price-sub">4 أفراد</div></div>
+          <button class="menu-order-btn" onclick="window.location='#order'">اطلب</button>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="broasted">
+        <div class="menu-card-emoji">🍗</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">نصف دجاجة بروستد</div>
+          <div class="menu-card-desc">نصف دجاجة بروستد ذهبية مع بطاطس وصوص مانجو</div>
+        </div>
+        <div class="menu-card-footer">
+          <div><div class="menu-price">32 ر</div><div class="menu-price-sub">فرد</div></div>
+          <button class="menu-order-btn" onclick="window.location='#order'">اطلب</button>
+        </div>
+      </div>
+
+      <!-- Grills -->
+      <div class="menu-card" data-category="grills">
+        <div class="menu-card-emoji">🥩<span class="menu-card-badge">حطب</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">مشاوي مشكلة</div>
+          <div class="menu-card-desc">تشكيلة من كفتة الدجاج والسيخ وشيش الطاووق مع أرز وخبز</div>
+        </div>
+        <div class="menu-card-footer">
+          <div><div class="menu-price">40 ر</div><div class="menu-price-sub">فردي</div></div>
+          <button class="menu-order-btn" onclick="window.location='#order'">اطلب</button>
+        </div>
+      </div>
+
+      <!-- Sandwiches -->
+      <div class="menu-card" data-category="sandwiches">
+        <div class="menu-card-emoji">🥪</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">ساندويش فلافل</div>
+          <div class="menu-card-desc">فلافل طازجة مقلية مع خضار وطحينة في خبز عربي</div>
+        </div>
+        <div class="menu-card-footer">
+          <div><div class="menu-price">8 ر</div><div class="menu-price-sub">شامل الضريبة</div></div>
+          <button class="menu-order-btn" onclick="window.location='#order'">اطلب</button>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="sandwiches">
+        <div class="menu-card-emoji">🧆</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">ساندويش حمص</div>
+          <div class="menu-card-desc">حمص بالطحينة مع زيت زيتون وبهارات على خبز شامي</div>
+        </div>
+        <div class="menu-card-footer">
+          <div><div class="menu-price">7 ر</div><div class="menu-price-sub">شامل الضريبة</div></div>
+          <button class="menu-order-btn" onclick="window.location='#order'">اطلب</button>
+        </div>
+      </div>
+
+      <!-- Drinks -->
+      <div class="menu-card" data-category="drinks">
+        <div class="menu-card-emoji">🥤<span class="menu-card-badge">طازج</span></div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">عصير برتقال طازج</div>
+          <div class="menu-card-desc">عصير برتقال طازج يُعصر أمامك لحظة الطلب</div>
+        </div>
+        <div class="menu-card-footer">
+          <div><div class="menu-price">12 ر</div><div class="menu-price-sub">كبير</div></div>
+          <button class="menu-order-btn" onclick="window.location='#order'">اطلب</button>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="drinks">
+        <div class="menu-card-emoji">🍋</div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">ليموناضة بالنعناع</div>
+          <div class="menu-card-desc">ليمون طازج بالنعناع والثلج — المشروب الصيفي المثالي</div>
+        </div>
+        <div class="menu-card-footer">
+          <div><div class="menu-price">10 ر</div><div class="menu-price-sub">وسط</div></div>
+          <button class="menu-order-btn" onclick="window.location='#order'">اطلب</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BRANCHES ==================== -->
+<section id="branches">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-eyebrow">فروعنا في الرياض</span>
+      <h2 class="section-title">دائمًا قريب منك</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">فروع متعددة في مختلف أحياء الرياض — مفتوح يوميًا من الصباح حتى السحر</p>
+    </div>
+
+    <div class="map-embed" onclick="window.open('https://maps.app.goo.gl/mamanoura', '_blank')">
+      <div class="map-icon">🗺️</div>
+      <div>انقر لعرض الفروع على خرائط Google</div>
+    </div>
+
+    <div class="branches-grid">
+
+      <div class="branch-card">
+        <div class="branch-header">
+          <div>
+            <div class="branch-name">فرع التخصصي</div>
+            <div class="branch-district">حي التخصصي — الرياض</div>
+          </div>
+          <span class="branch-status open">مفتوح الآن</span>
+        </div>
+        <div class="branch-services">
+          <span class="branch-service-tag">🚶 للمشاة</span>
+          <span class="branch-service-tag">🚗 سفري</span>
+          <span class="branch-service-tag">🏠 توصيل</span>
+        </div>
+        <div class="branch-details">
+          <div class="branch-detail"><span class="branch-detail-icon">📍</span><span class="branch-detail-text">طريق التخصصي، الرياض</span></div>
+          <div class="branch-detail"><span class="branch-detail-icon">⏰</span><span class="branch-hours">5:30 صباحًا — 3:00 فجرًا</span></div>
+          <div class="branch-detail"><span class="branch-detail-icon">📞</span><span class="branch-detail-text">920XXXXXX</span></div>
+        </div>
+        <div class="branch-actions">
+          <button class="branch-btn branch-btn-map" onclick="window.open('https://maps.app.goo.gl/', '_blank')">📍 افتح الخريطة</button>
+          <button class="branch-btn branch-btn-order" onclick="window.location='#order'">اطلب من هذا الفرع</button>
+        </div>
+      </div>
+
+      <div class="branch-card">
+        <div class="branch-header">
+          <div>
+            <div class="branch-name">فرع الملز</div>
+            <div class="branch-district">حي الملز — الرياض</div>
+          </div>
+          <span class="branch-status busy">مزدحم حاليًا</span>
+        </div>
+        <div class="branch-services">
+          <span class="branch-service-tag">🚶 للمشاة</span>
+          <span class="branch-service-tag">🚗 سفري</span>
+          <span class="branch-service-tag">🏠 توصيل</span>
+          <span class="branch-service-tag">🛋️ جلسات داخلية</span>
+        </div>
+        <div class="branch-details">
+          <div class="branch-detail"><span class="branch-detail-icon">📍</span><span class="branch-detail-text">شارع الملز، الرياض</span></div>
+          <div class="branch-detail"><span class="branch-detail-icon">⏰</span><span class="branch-hours">5:30 صباحًا — 3:00 فجرًا</span></div>
+          <div class="branch-detail"><span class="branch-detail-icon">📞</span><span class="branch-detail-text">920XXXXXX</span></div>
+        </div>
+        <div class="branch-actions">
+          <button class="branch-btn branch-btn-map" onclick="window.open('https://maps.app.goo.gl/', '_blank')">📍 افتح الخريطة</button>
+          <button class="branch-btn branch-btn-order" onclick="window.location='#order'">اطلب من هذا الفرع</button>
+        </div>
+      </div>
+
+      <div class="branch-card">
+        <div class="branch-header">
+          <div>
+            <div class="branch-name">فرع النزهة</div>
+            <div class="branch-district">حي النزهة — الرياض</div>
+          </div>
+          <span class="branch-status open">مفتوح الآن</span>
+        </div>
+        <div class="branch-services">
+          <span class="branch-service-tag">🚶 للمشاة</span>
+          <span class="branch-service-tag">🚗 درايف ثرو</span>
+          <span class="branch-service-tag">🏠 توصيل</span>
+        </div>
+        <div class="branch-details">
+          <div class="branch-detail"><span class="branch-detail-icon">📍</span><span class="branch-detail-text">شارع النزهة، الرياض</span></div>
+          <div class="branch-detail"><span class="branch-detail-icon">⏰</span><span class="branch-hours">5:30 صباحًا — 3:00 فجرًا</span></div>
+          <div class="branch-detail"><span class="branch-detail-icon">📞</span><span class="branch-detail-text">920XXXXXX</span></div>
+        </div>
+        <div class="branch-actions">
+          <button class="branch-btn branch-btn-map" onclick="window.open('https://maps.app.goo.gl/', '_blank')">📍 افتح الخريطة</button>
+          <button class="branch-btn branch-btn-order" onclick="window.location='#order'">اطلب من هذا الفرع</button>
+        </div>
+      </div>
+
+      <div class="branch-card">
+        <div class="branch-header">
+          <div>
+            <div class="branch-name">فرع الروضة</div>
+            <div class="branch-district">حي الروضة — الرياض</div>
+          </div>
+          <span class="branch-status open">مفتوح الآن</span>
+        </div>
+        <div class="branch-services">
+          <span class="branch-service-tag">🚶 للمشاة</span>
+          <span class="branch-service-tag">🚗 سفري</span>
+          <span class="branch-service-tag">🏠 توصيل</span>
+        </div>
+        <div class="branch-details">
+          <div class="branch-detail"><span class="branch-detail-icon">📍</span><span class="branch-detail-text">طريق الروضة، الرياض</span></div>
+          <div class="branch-detail"><span class="branch-detail-icon">⏰</span><span class="branch-hours">5:30 صباحًا — 3:00 فجرًا</span></div>
+          <div class="branch-detail"><span class="branch-detail-icon">📞</span><span class="branch-detail-text">920XXXXXX</span></div>
+        </div>
+        <div class="branch-actions">
+          <button class="branch-btn branch-btn-map" onclick="window.open('https://maps.app.goo.gl/', '_blank')">📍 افتح الخريطة</button>
+          <button class="branch-btn branch-btn-order" onclick="window.location='#order'">اطلب من هذا الفرع</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ORDER HUB ==================== -->
+<section id="order">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-eyebrow">اطلب الآن</span>
+      <h2 class="section-title">طلبك في دقائق على بابك</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">اختر طريقة الطلب الأنسب لك — نعمل مع أكبر تطبيقات التوصيل في المملكة</p>
+    </div>
+
+    <div class="order-grid">
+      <a href="https://hungerstation.com" target="_blank" class="order-card">
+        <div class="order-card-icon">🔴</div>
+        <div class="order-card-name">هنقرستيشن</div>
+        <div class="order-card-desc">التوصيل في 30 دقيقة مع تتبع مباشر</div>
+        <div class="order-card-action">اطلب الآن ←</div>
+      </a>
+      <a href="https://jahez.net" target="_blank" class="order-card">
+        <div class="order-card-icon">🟡</div>
+        <div class="order-card-name">جاهز</div>
+        <div class="order-card-desc">توصيل سريع وموثوق في الرياض</div>
+        <div class="order-card-action">اطلب الآن ←</div>
+      </a>
+      <a href="https://toyou.sa" target="_blank" class="order-card">
+        <div class="order-card-icon">🟢</div>
+        <div class="order-card-name">تويو</div>
+        <div class="order-card-desc">خدمة توصيل ذكية وسريعة</div>
+        <div class="order-card-action">اطلب الآن ←</div>
+      </a>
+      <a href="https://ninjasa.com" target="_blank" class="order-card">
+        <div class="order-card-icon">🟣</div>
+        <div class="order-card-name">نينجا</div>
+        <div class="order-card-desc">توصيل بضمان الجودة</div>
+        <div class="order-card-action">اطلب الآن ←</div>
+      </a>
+    </div>
+
+    <div class="whatsapp-strip">
+      <div class="wa-text">
+        <div class="wa-title">📲 اطلب عبر واتساب مباشرةً</div>
+        <div class="wa-desc">للطلبات الكبيرة، المناسبات، أو الاستفسارات — نرد بسرعة</div>
+      </div>
+      <a href="https://wa.me/966XXXXXXXXX?text=أريد طلب من ماما نورة" target="_blank" class="wa-btn">
+        <span>💬</span> تواصل الآن
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-eyebrow">الأسئلة الشائعة</span>
+      <h2 class="section-title">كل ما تريد معرفته</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span class="faq-q-text">ما هي ساعات عمل المطعم؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">جميع فروع ماما نورة مفتوحة يوميًا من الساعة 5:30 صباحًا حتى 3:00 فجرًا — بما فيها أيام الجمعة والمواسم والإجازات الرسمية.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span class="faq-q-text">هل يوجد توصيل لجميع أحياء الرياض؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">نعم، نوصّل لجميع أحياء الرياض عبر منصات التوصيل: هنقرستيشن، جاهز، تويو، ونينجا. تغطية المنطقة تعتمد على المنصة والفرع الأقرب إليك.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span class="faq-q-text">ما طرق الدفع المتاحة؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">نقبل الدفع نقدًا، بالبطاقات الائتمانية (فيزا/ماستركارد)، ومدى، وApple Pay. الدفع الإلكتروني متاح عبر جميع منصات التوصيل.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span class="faq-q-text">هل المطعم مناسب لمرضى الحساسية الغذائية؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">لأي استفسار عن مكونات الأطباق أو الحساسية الغذائية، يرجى التواصل معنا مباشرةً عبر واتساب أو نموذج التواصل. فريقنا سيجيبك بتفاصيل المكونات الكاملة.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span class="faq-q-text">كيف أقدم شكوى أو اقتراح؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">يمكنك تقديم شكواك أو اقتراحك عبر نموذج التواصل بالأسفل، أو عبر واتساب مباشرةً. نتعهد بالرد خلال 24 ساعة.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span class="faq-q-text">هل يمكن حجز طلبيات للمناسبات والشركات؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">بالتأكيد! نقدم خدمة الطلبات الكبيرة للشركات والمناسبات بأسعار مميزة. تواصل معنا مسبقًا عبر واتساب لتنسيق طلبك.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span class="faq-q-text">ما سياسة الاستبدال والاسترجاع؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">في حال وجود مشكلة في طلبك، تواصل معنا خلال ساعة من استلام الطلب وسنعالج الأمر فورًا. رضاك هو أولويتنا.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-eyebrow">نسمعك دائمًا</span>
+      <h2 class="section-title">تواصل معنا</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">شكوى، اقتراح، أو مجرد سلام — فريقنا جاهز للرد</p>
+    </div>
+
+    <div class="contact-layout">
+      <div class="contact-info">
+        <div class="contact-info-card">
+          <div class="contact-info-icon">📞</div>
+          <div>
+            <div class="contact-info-title">اتصل بنا</div>
+            <div class="contact-info-val">920 XXX XXX<br><small style="opacity:0.6">خط موحد — الرياض</small></div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon">💬</div>
+          <div>
+            <div class="contact-info-title">واتساب</div>
+            <div class="contact-info-val">+966 5X XXX XXXX<br><small style="opacity:0.6">متاح يوميًا 24/7</small></div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon">📧</div>
+          <div>
+            <div class="contact-info-title">البريد الإلكتروني</div>
+            <div class="contact-info-val">info@mamanoura.com</div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon">⏰</div>
+          <div>
+            <div class="contact-info-title">ساعات الاستجابة</div>
+            <div class="contact-info-val">يوميًا 8:00 ص — 12:00 م<br><small style="opacity:0.6">نرد على الرسائل خلال ساعتين</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <div id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">الاسم الكريم</label>
+              <input type="text" class="form-input" placeholder="اسمك" id="fname">
+            </div>
+            <div class="form-group">
+              <label class="form-label">رقم الجوال</label>
+              <input type="tel" class="form-input" placeholder="05XXXXXXXX" id="fphone">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">البريد الإلكتروني (اختياري)</label>
+            <input type="email" class="form-input" placeholder="example@email.com" id="femail">
+          </div>
+          <div class="form-group">
+            <label class="form-label">نوع الرسالة</label>
+            <select class="form-select form-input" id="ftype">
+              <option value="">اختر...</option>
+              <option value="complaint">شكوى</option>
+              <option value="suggestion">اقتراح</option>
+              <option value="inquiry">استفسار</option>
+              <option value="order">طلب خاص / مناسبة</option>
+              <option value="partnership">تعاون</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">الفرع المعني (اختياري)</label>
+            <select class="form-select form-input" id="fbranch">
+              <option value="">جميع الفروع</option>
+              <option>فرع التخصصي</option>
+              <option>فرع الملز</option>
+              <option>فرع النزهة</option>
+              <option>فرع الروضة</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">رسالتك</label>
+            <textarea class="form-textarea" placeholder="اكتب رسالتك هنا..." id="fmessage"></textarea>
+          </div>
+          <button type="button" class="form-submit" onclick="submitForm()">إرسال الرسالة ✉️</button>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">✅</div>
+          <div class="form-success-title">تم إرسال رسالتك بنجاح</div>
+          <div class="form-success-desc">سيتواصل معك فريقنا خلال 24 ساعة. شكرًا لتواصلك معنا!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">ماما نورة</div>
+        <p class="footer-brand-desc">مطعم ماما نورة — علامة رياضية أصيلة في الشاورما والمأكولات الشعبية منذ سنوات. نلتزم بالجودة والطعم في كل لقمة.</p>
+        <div class="footer-socials">
+          <div class="footer-social" onclick="window.open('https://instagram.com', '_blank')" title="Instagram">📸</div>
+          <div class="footer-social" onclick="window.open('https://x.com', '_blank')" title="X">𝕏</div>
+          <div class="footer-social" onclick="window.open('https://tiktok.com', '_blank')" title="TikTok">🎵</div>
+          <div class="footer-social" onclick="window.open('https://snapchat.com', '_blank')" title="Snapchat">👻</div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">روابط سريعة</div>
+        <ul class="footer-links">
+          <li><a href="#menu">المنيو الكامل</a></li>
+          <li><a href="#branches">الفروع</a></li>
+          <li><a href="#order">اطلب الآن</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">المطعم</div>
+        <ul class="footer-links">
+          <li><a href="#faq">من نحن</a></li>
+          <li><a href="#faq">وظائف</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
+          <li><a href="#contact">شكاوى واقتراحات</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">التوصيل</div>
+        <ul class="footer-links">
+          <li><a href="https://hungerstation.com" target="_blank">هنقرستيشن</a></li>
+          <li><a href="https://jahez.net" target="_blank">جاهز</a></li>
+          <li><a href="https://toyou.sa" target="_blank">تويو</a></li>
+          <li><a href="https://ninjasa.com" target="_blank">نينجا</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 ماما نورة — جميع الحقوق محفوظة</div>
+      <div class="footer-rating">
+        <span class="footer-stars">★★★★☆</span>
+        <span>4.3 / 5 — +28,714 مراجعة على Google</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== STICKY MOBILE CTA ==================== -->
+<div class="sticky-mobile-cta">
+  <button class="sticky-btn sticky-location" onclick="window.location='#branches'">📍 أقرب فرع</button>
+  <button class="sticky-btn sticky-order" onclick="window.location='#order'">🛒 اطلب الآن</button>
+</div>
+
+<!-- ==================== SCROLL TOP ==================== -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="للأعلى">↑</button>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+/* ----- Nav scroll effect ----- */
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('mainNav');
+  const scrollTop = document.getElementById('scrollTop');
+  if (window.scrollY > 60) {
+    nav.style.background = 'rgba(28,10,0,0.97)';
+    scrollTop.classList.add('visible');
+  } else {
+    nav.style.background = 'rgba(28,10,0,0.92)';
+    scrollTop.classList.remove('visible');
+  }
+});
+
+/* ----- Mobile menu ----- */
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+document.addEventListener('click', (e) => {
+  const menu = document.getElementById('mobileMenu');
+  const ham = document.getElementById('hamburger');
+  if (!menu.contains(e.target) && !ham.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+
+/* ----- Menu filter ----- */
+function filterMenu(cat, btn) {
+  /* Update tabs */
+  document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  /* Filter cards */
+  const cards = document.querySelectorAll('.menu-card');
+  cards.forEach(card => {
+    if (cat === 'all' || card.dataset.category === cat) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+/* ----- FAQ accordion ----- */
+function toggleFaq(item) {
+  const isOpen = item.classList.contains('open');
+  /* Close all */
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  /* Open clicked if it was closed */
+  if (!isOpen) item.classList.add('open');
+}
+
+/* ----- Contact form ----- */
+function submitForm() {
+  const name = document.getElementById('fname').value.trim();
+  const phone = document.getElementById('fphone').value.trim();
+  const message = document.getElementById('fmessage').value.trim();
+  if (!name || !phone || !message) {
+    alert('يرجى تعبئة الاسم والجوال والرسالة على الأقل.');
+    return;
+  }
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+
+/* ----- Language toggle (simple demo) ----- */
+let isArabic = true;
+const langMap = {
+  'ماما نورة': 'Mama Noura',
+  'اطلب الآن': 'Order Now',
+  'المنيو': 'Menu',
+  'الفروع': 'Branches',
+  'تواصل معنا': 'Contact Us',
+  'طعم': 'A Taste',
+  'أصيل': 'Authentic',
+  'منذ البداية': 'Since Day One',
+};
+function toggleLang() {
+  const btn = document.querySelector('.lang-toggle');
+  isArabic = !isArabic;
+  btn.textContent = isArabic ? 'EN' : 'AR';
+  document.documentElement.lang = isArabic ? 'ar' : 'en';
+  document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+  /* Swap nav links text as a demo */
+  if (!isArabic) {
+    document.querySelector('.nav-logo-text').textContent = 'Mama Noura';
+    document.querySelector('.nav-order-btn').textContent = 'Order Now';
+  } else {
+    document.querySelector('.nav-logo-text').textContent = 'ماما نورة';
+    document.querySelector('.nav-order-btn').textContent = 'اطلب الآن';
+  }
+}
+
+/* ----- Intersection Observer for fade-up (hero only on load) ----- */
+const hero = document.querySelector('.hero');
+if (hero) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.fade-up').forEach(el => {
+          el.style.animationPlayState = 'running';
+        });
+      }
+    });
+  }, { threshold: 0.1 });
+  obs.observe(hero);
+}
+
+/* ----- Smooth scroll for anchor links ----- */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
